@@ -76,7 +76,8 @@ void loop()
     case LABEL1_TAG:        //dotknięto etykietę LABEL1
       keyboard.keyBoardType = 1;
       keyboard.targetData = LABEL1_TAG;
-      memset(message, ' ', MESSAGE_SIZE);
+      memset(message, ' ', MESSAGE_SIZE-1);
+      message[MESSAGE_SIZE-1] = 0;
       break;
     case 13:                //Dotknięto ENTER
       //przepisanie z okna klawiatury do celu
