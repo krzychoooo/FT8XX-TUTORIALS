@@ -6,13 +6,13 @@
 #define LedBlue A0
 
 //          Button(byte itemType, byte itemId, byte menuuId, byte posX, byte posY, uint16_t width, uint16_t heigh, byte tag, byte font, const char* text);
-Button b0 = Button(0, 0, 200, 0, 0, 160, 45, 200, 30, "setting");
+Button b0(0, 0, 200, 0, 0, 160, 45, 200, 30, "setting");
 Button b1 = Button(1, 1, 200, 0, 50, 160, 45, 201, 30, "set IP");
 Button b2 = Button(1, 2, 200, 0, 100, 160, 45, 202, 30, "set time");
 
 Button b3 = Button(0, 3, 203, 165, 0, 160, 45, 203, 30, "action");
 Button b4 = Button(1, 4, 203, 165, 50, 160, 45, 204, 30, "reset");
-Button b5 = Button(1, 5, 203, 165, 100, 160, 45, 205, 30, "set");
+Button b5(1, 5, 203, 165, 100, 160, 45, 205, 30, "set");
 
 Button *menu[] = {
     &b0,
@@ -110,3 +110,4 @@ void ledOn(){
 void ledOff(){
   digitalWrite(LedBlue, HIGH);
 }
+
